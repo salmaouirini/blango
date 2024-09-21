@@ -28,6 +28,7 @@ from blango_auth.forms import BlangoRegistrationForm
 
 urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("allauth.urls")),
     path(
             "accounts/register/",
             RegistrationView.as_view(form_class=BlangoRegistrationForm),
