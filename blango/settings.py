@@ -180,7 +180,7 @@ class Dev(Configuration):
     "loggers": {
         "django.request": {
             "handlers": ["mail_admins"],
-            "level": "ERROR",
+            "level": "DEBUG",
             "propagate": True,
         },
     },
@@ -196,7 +196,11 @@ class Dev(Configuration):
       'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     ]
     INTERNAL_IPS = ["192.168.11.179"]
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
     AUTH_USER_MODEL = "blango_auth.User"
+    ACCOUNT_ACTIVATION_DAYS = 7
+    
+
 
 
 
