@@ -13,8 +13,9 @@
     </div>
 {% endrow %}
 {% row %}
-    {% col %}
+    <div class="col">
+        {% include "blog/post-comments.html" %}
         {% recent_posts post %}
-    {% endcol %}
+    </div>
 {% endrow %}
 {% endblock %}
